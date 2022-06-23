@@ -82,11 +82,31 @@ for i in a:
 print(a)
 
 #Question 12
+a = [i for i in range(1,100)]
+a.remove(int(input("")))
+b = sum(a)
+c = len(a)+1
+missing_num=(c*(c+1))//2-b 
+print("The missing number is :",missing_num)
 
 #Question 13
-
+a = [4,834,248742,136842,21,3211111,834,11,248742]
+b = set(a)
+for i in b:
+    if a.count(i)>1:
+        print("{} has {} duplicates in given list".format(i,a.count(i)))
+        
 #Question 14
-
+a = [4,834,248742,136842,21,3211111,834,11,248742]
+dict={}
+for i in a:
+    try:
+        dict[i]+=1
+    except:
+        dict[i]=1
+for i,j in dict.items():
+    print(f'{i} repeat {j} times')
+    
 #Question 15
 a = [1,2]
 b = [3,4,5]
